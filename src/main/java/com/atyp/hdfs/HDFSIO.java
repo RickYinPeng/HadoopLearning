@@ -77,8 +77,8 @@ public class HDFSIO {
          * 这个时候如果还使用 IOUtils.copyBytes 相当于全部输出了,所以这个时候使用传统的方式
          */
         //IOUtils.copyBytes(open, fos, configuration);
-        byte[] buf  = new byte[1024];
-        for (int i = 0; i < 1024*128; i++) {
+        byte[] buf = new byte[1024];
+        for (int i = 0; i < 1024 * 128; i++) {
             open.read(buf);
             fos.write(buf);
         }
@@ -100,7 +100,7 @@ public class HDFSIO {
         FSDataInputStream open = fs.open(new Path("/hadoop-2.7.2.zip"));
 
         // 3.设置指定读取的起点
-        open.seek(1024*1024*128);
+        open.seek(1024 * 1024 * 128);
 
         // 4.获取输出流
         FileOutputStream fos = new FileOutputStream(new File("D:\\hadoop-2.7.2.zip.part2"));

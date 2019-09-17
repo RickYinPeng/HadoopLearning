@@ -144,18 +144,15 @@ public class HDFSClient {
         //获取某一个文件的状态
         FileStatus[] fileStatuses = fs.listStatus(new Path("/"));
         for (FileStatus fileStatus : fileStatuses) {
-            if(fileStatus.isFile()){
+            if (fileStatus.isFile()) {
                 //文件
-                System.out.println("f:"+fileStatus.getPath().getName());
-            }else {
+                System.out.println("f:" + fileStatus.getPath().getName());
+            } else {
                 //文件夹
-                System.out.println("d:"+fileStatus.getPath().getName());
+                System.out.println("d:" + fileStatus.getPath().getName());
             }
         }
         // 3.关闭资源
         fs.close();
     }
-
-
-
 }
