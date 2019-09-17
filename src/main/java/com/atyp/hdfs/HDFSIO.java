@@ -1,6 +1,5 @@
 package com.atyp.hdfs;
 
-import jdk.nashorn.internal.runtime.regexp.joni.constants.OPCode;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FSDataOutputStream;
